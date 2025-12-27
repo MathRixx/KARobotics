@@ -19,7 +19,7 @@ The website is built with **ASP.NET Core MVC** and is designed to present the te
 ## 🛠️ Tech Stack
 
 - **Backend:** ASP.NET Core MVC
-- **Frontend:** HTML, CSS, JavaScript (plus any framework you add)
+- **Frontend:** HTML, CSS, JavaScript
 - **Runtime:** .NET Core
 - **Architecture:** MVC (Model–View–Controller)
 
