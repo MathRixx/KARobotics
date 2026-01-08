@@ -1,0 +1,63 @@
+name: Publish and push to the deploy branch
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0"  # Projen 6/7 ise değiştir
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Publish
+        run: dotnet publish -c Release -o publish
+
+      # deploy branch'ini publish çıktısıyla güncelle
+      - name: Push publish output to deploy branch
+        run: |
+          set -e
+
+          # publish klasörünü geçici bir yere al
+          rm -rf /tmp/publish_out
+          mkdir -p /tmp/publish_out
+          cp -R publish/. /tmp/publish_out/
+
+          # deploy branch'ini hazırlamak için repoyu temizle
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # deploy branch yoksa oluştur
+          git fetch origin deploy || true
+          if git show-ref --verify --quiet refs/remotes/origin/deploy; then
+            git checkout deploy
+          else
+            git checkout --orphan deploy
+          fi
+
+          # branch içeriğini tamamen sıfırla
+          git rm -r --ignore-unmatch .
+          rm -rf *
+
+          # publish çıktısını köke koy
+          cp -R /tmp/publish_out/. .
+
+          # (opsiyonel) deploy branch'e bir README bırak
+          echo "This branch is auto-generated. Do not edit manually." > README.md
+
+          git add -A
+          git commit -m "Deploy: $GITHUB_SHA" || echo "No changes to commit"
+          git push -u origin deploy --force
