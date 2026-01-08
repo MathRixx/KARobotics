@@ -1,5 +1,6 @@
 ﻿@using Microsoft.Extensions.Localization
-@using KAR_Robotics.Models
+@using Microsoft.AspNetCore.Mvc.Localization
+@using KAR_Robotics
 @inject IStringLocalizer<SharedResource> Localizer
 <!-- About Section -->
 <section id="about" class="about section" style="padding-bottom: 0px">
@@ -12,7 +13,9 @@
             </div>
             <div class="col-lg-6 order-2 order-lg-1 content">
                 <h3>
-                    @Localizer["Test"]
+                    <p>Mevcut Kültür: @System.Globalization.CultureInfo.CurrentCulture.Name</p>
+                    <p>Testv2 Çevirisi: @Localizer["Testv2"]</p>
+                    @Localizer["Testv2"]
                 </h3>
                 <!-- <p class="fst-italic"> -->
                 <p>
