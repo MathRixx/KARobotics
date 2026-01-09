@@ -29,35 +29,32 @@ jobs:
       # deploy branch'ini publish çıktısıyla güncelle
       - name: Push publish output to deploy branch
         run: |
-          set -e
-
-          # publish klasörünü geçici bir yere al
+          set -euxo pipefail
+      
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+      
           rm -rf /tmp/publish_out
           mkdir -p /tmp/publish_out
           cp -R publish/. /tmp/publish_out/
-
-          # deploy branch'ini hazırlamak için repoyu temizle
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          # deploy branch yoksa oluştur
+      
           git fetch origin deploy || true
           if git show-ref --verify --quiet refs/remotes/origin/deploy; then
-            git checkout deploy
+            git checkout -B deploy origin/deploy
           else
             git checkout --orphan deploy
           fi
-
-          # branch içeriğini tamamen sıfırla
+      
           git rm -r --ignore-unmatch .
-          rm -rf *
-
-          # publish çıktısını köke koy
+          git clean -fdx
+      
           cp -R /tmp/publish_out/. .
-
-          # (opsiyonel) deploy branch'e bir README bırak
-          echo "This branch is auto-generated. Do not edit manually." > README.md
-
-          git add -A
-          git commit -m "Deploy: $GITHUB_SHA" || echo "No changes to commit"
-          git push -u origin deploy --force
+      
+          # deploy branch'inde ignore kurallarını istemiyoruz
+          rm -f .gitignore
+      
+          # ignore edilen dosyalar varsa bile ekle
+          git add -A -f
+      
+          git commit -m "Deploy: $GITHUB_SHA" || true
+          git push origin deploy --force
