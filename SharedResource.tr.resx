@@ -191,6 +191,9 @@ KAR Robotics olarak inanıyoruz ki, geleceği inşa edenler; hayal kuran, ürete
   <data name="ContactPhone" xml:space="preserve">
     <value>Bizi Arayın</value>
   </data>
+  <data name="English" xml:space="preserve">
+    <value>İngilizce</value>
+  </data>
   <data name="FeaturesH2" xml:space="preserve">
     <value>EKİPLERİMİZ</value>
   </data>
@@ -221,6 +224,9 @@ KAR Robotics olarak inanıyoruz ki, geleceği inşa edenler; hayal kuran, ürete
   <data name="FeaturesPPR" xml:space="preserve">
     <value>Takımımızın dış dünya ile olan iletişimini yönetir. Sosyal medya içerikleri hazırlar, sponsorluk görüşmelerini yürütür ve takımımızı okullar, etkinlikler ve topluluklarda en iyi şekilde temsil eder. Hem markamızı güçlendirir hem de FRC kültürünü daha fazla insana ulaştırır.</value>
   </data>
+  <data name="German" xml:space="preserve">
+    <value>Almanca</value>
+  </data>
   <data name="HeroSlogan" xml:space="preserve">
     <value>Yükselmek doğamızda var</value>
   </data>
@@ -229,6 +235,9 @@ KAR Robotics olarak inanıyoruz ki, geleceği inşa edenler; hayal kuran, ürete
   </data>
   <data name="lang" xml:space="preserve">
     <value>tr</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Türkçe</value>
   </data>
   <data name="Links" xml:space="preserve">
     <value>Bağlantılar</value>
@@ -280,5 +289,8 @@ KAR Robotics olarak inanıyoruz ki, geleceği inşa edenler; hayal kuran, ürete
   </data>
   <data name="SponsorsH2P" xml:space="preserve">
     <value>Sponsorlarımız</value>
+  </data>
+  <data name="Turkish" xml:space="preserve">
+    <value>Türkçe</value>
   </data>
 </root>

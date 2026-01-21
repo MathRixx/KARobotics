@@ -191,6 +191,9 @@ The FRC journey teaches us more than engineering and coding; it builds self-conf
   <data name="ContactPhone" xml:space="preserve">
     <value>Phone</value>
   </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
   <data name="FeaturesH2" xml:space="preserve">
     <value>OUR TEAMS</value>
   </data>
@@ -221,6 +224,9 @@ The FRC journey teaches us more than engineering and coding; it builds self-conf
   <data name="FeaturesPPR" xml:space="preserve">
     <value>Manages our communication with the outside world. Prepares social media content, conducts sponsorship meetings, and represents our team in schools, events, and communities in the best possible way. Strengthens our brand and helps spread the FRC culture to a wider audience.</value>
   </data>
+  <data name="German" xml:space="preserve">
+    <value>German</value>
+  </data>
   <data name="HeroSlogan" xml:space="preserve">
     <value>Rising is in our nature</value>
   </data>
@@ -229,6 +235,9 @@ The FRC journey teaches us more than engineering and coding; it builds self-conf
   </data>
   <data name="lang" xml:space="preserve">
     <value>en</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>English</value>
   </data>
   <data name="Links" xml:space="preserve">
     <value>Links</value>
@@ -280,5 +289,8 @@ The FRC journey teaches us more than engineering and coding; it builds self-conf
   </data>
   <data name="SponsorsH2P" xml:space="preserve">
     <value>OUR SPONSORS</value>
+  </data>
+  <data name="Turkish" xml:space="preserve">
+    <value>Turkish</value>
   </data>
 </root>

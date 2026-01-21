@@ -188,6 +188,9 @@ Der FRC-Prozess lehrt uns nicht nur Ingenieurwesen und Programmierung, sondern v
   <data name="ContactPhone" xml:space="preserve">
     <value>Telefon</value>
   </data>
+  <data name="English" xml:space="preserve">
+    <value>Englisch</value>
+  </data>
   <data name="FeaturesH2" xml:space="preserve">
     <value>UNSERE TEAMS</value>
   </data>
@@ -218,6 +221,9 @@ Der FRC-Prozess lehrt uns nicht nur Ingenieurwesen und Programmierung, sondern v
   <data name="FeaturesPPR" xml:space="preserve">
     <value>Verantwortlich für die Kommunikation unseres Teams mit der Außenwelt. Erstellt Social-Media-Inhalte, führt Sponsoring-Gespräche und vertritt unser Team bestmöglich in Schulen, bei Veranstaltungen und in der Öffentlichkeit. Stärkt unsere Marke und bringt die FRC-Kultur zu mehr Menschen.</value>
   </data>
+  <data name="German" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
   <data name="HeroSlogan" xml:space="preserve">
     <value>Aufsteigen liegt in unserer Natur</value>
   </data>
@@ -226,6 +232,9 @@ Der FRC-Prozess lehrt uns nicht nur Ingenieurwesen und Programmierung, sondern v
   </data>
   <data name="lang" xml:space="preserve">
     <value>de</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Deutsch</value>
   </data>
   <data name="Links" xml:space="preserve">
     <value>Links</value>
@@ -278,5 +287,8 @@ Der FRC-Prozess lehrt uns nicht nur Ingenieurwesen und Programmierung, sondern v
   </data>
   <data name="SponsorsH2P" xml:space="preserve">
     <value>UNSERE SPONSOREN</value>
+  </data>
+  <data name="Turkish" xml:space="preserve">
+    <value>Turkisch</value>
   </data>
 </root>

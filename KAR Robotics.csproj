@@ -7,4 +7,8 @@
     <RootNamespace>KAR_Robotics</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\flags\" />
+  </ItemGroup>
+
 </Project>
